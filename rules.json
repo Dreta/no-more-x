@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "scheme": "https",
+          "host": "twitter.com",
+          "queryTransform": {
+            "addOrReplaceParams": [
+              {
+                "key": "mx",
+                "value": "1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||x.com/*",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "addOrReplaceParams": [
+              {
+                "key": "mx",
+                "value": "1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||twitter.com/*",
+      "resourceTypes": ["main_frame", "sub_frame"],
+      "excludedParams": [{"key": "mx", "value": "1"}]
+    }
+  }
+]
