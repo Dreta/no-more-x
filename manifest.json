@@ -3,6 +3,11 @@
   "description": "Get good old Twitter back",
   "version": "1.0",
   "manifest_version": 3,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "nomorex@dreta.dev"
+    }
+  },
   "permissions": [
     "declarativeNetRequest",
     "declarativeNetRequestWithHostAccess"
